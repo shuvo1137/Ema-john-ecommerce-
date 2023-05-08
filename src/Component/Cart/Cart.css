@@ -1,0 +1,10 @@
+.cart {
+  box-sizing: border-box;
+  background-color: aqua;
+  padding: 30px 20px;
+}
+.cart-details {
+  margin: auto 60px;
+  position: sticky;
+  top: 0;
+}

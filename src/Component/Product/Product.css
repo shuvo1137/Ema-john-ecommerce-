@@ -1,0 +1,29 @@
+.product {
+  box-sizing: border-box;
+  height: 480px;
+  width: 300px;
+  border: 1px solid #95a0a7;
+  position: relative;
+}
+
+.product img {
+  height: 270px;
+  width: 280px;
+  margin: 9px;
+}
+
+.product h5 {
+  font-weight: 700;
+  padding: 0 14px;
+  font-size: 18px;
+}
+
+.product-info {
+  padding: 14px;
+}
+
+.product button {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
