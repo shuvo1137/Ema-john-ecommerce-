@@ -4,9 +4,10 @@ import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
 
 import { addToDb, getStoredCart } from "../../utilities/fakedb";
+import useProducts from "../../Hook/Products";
 
 const Shop = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useProducts();
   const [cart, setCart] = useState([]);
   function handleAddToCart(product) {
     let newCart = [];
@@ -28,14 +29,6 @@ const Shop = () => {
     setCart(newCart);
     addToDb(product.id);
   }
-  useEffect(() => {
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((product) => {
-        // console.log(product);
-        return setProducts(product);
-      });
-  }, []);
 
   useEffect(() => {
     const storedCart = getStoredCart();
